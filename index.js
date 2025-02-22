@@ -3,23 +3,25 @@ const cors = require('cors')
 
 const app = express()
 
+app.use(express.static('dist'))
 app.use(cors())
 app.use(express.json())
+
 
 let notes = [
     {
       id: 1,
-      content: "HTML is easy",
+      content: "HTML is easy. Backend",
       important: true
     },
     {
       id: 2,
-      content: "Browser can execute only JavaScript",
+      content: "Browser can execute only JavaScript. Backend",
       important: false
     },
     {
       id: 3,
-      content: "GET and POST are the most important methods of HTTP protocol",
+      content: "GET and POST are the most important methods of HTTP protocol. Backend",
       important: true
     }
 ]
